@@ -13,7 +13,42 @@ export default async function getMovies () {
     {
       slug: 'originals',
       title: 'Originais Netflix',
-      items: [await baseFetch(`/movie/550?api_key=${API_KEY}`)]
+      items: [await baseFetch(`/discover/tv?with_network=213&${language}&api_key=${API_KEY}`)]
+    },
+    {
+      slug: 'trending',
+      title: 'Recomendados para você',
+      items: [await baseFetch(`/trending/all/week?${language}&api_key=${API_KEY}`)]
+    },
+    {
+      slug: 'topRated',
+      title: 'Em alta',
+      items: [await baseFetch(`/movie/top_rated?${language}&api_key=${API_KEY}`)]
+    },
+    {
+      slug: 'action',
+      title: 'Ação',
+      items: [await baseFetch(`/discover/movie?with_genres=28&${language}&api_key=${API_KEY}`)]
+    },
+    {
+      slug: 'comedy',
+      title: 'Comédia',
+      items: [await baseFetch(`/discover/movie?with_genres=35&${language}&api_key=${API_KEY}`)]
+    },
+    {
+      slug: 'horror',
+      title: 'Terror',
+      items: [await baseFetch(`/discover/movie?with_genres=27&${language}&api_key=${API_KEY}`)]
+    },
+    {
+      slug: 'romance',
+      title: 'Romance',
+      items: [await baseFetch(`/discover/movie?with_genres=10749&${language}&api_key=${API_KEY}`)]
+    },
+    {
+      slug: 'documentary',
+      title: 'Documentários',
+      items: [await baseFetch(`/discover/movie?with_genres=99&${language}&api_key=${API_KEY}`)]
     }
   ];
 }

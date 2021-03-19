@@ -1,19 +1,31 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import getMovies from './services/tmdb';
+import MovieSection from './components/movieSection';
 
 export default function App() {
 
-  useEffect(() => {
-    const load = async () => {
-      const req = await getMovies();
-      console.log('Passou por aqui', req);
-    }
+  const [movieList, setMovieList] = useState([]);
 
-    load();
+  useEffect(() => {
+
+    async function fetchAPI() {
+      let req = await getMovies();
+      setMovieList(req);      
+  }
+
+  fetchAPI()
   }, [])
 
-  return (
-    <h1>Projeto Netflix</h1>
-  );
+  return(
+    <div>
+      <section>
+        {movieList.map((item, key) => (
+          <div>
+            <MovieSection key={key} title={item.title} items={item.items}/>
+          </div>
+        ))}
+      </section>
+    </div>
+  )
 }
 
