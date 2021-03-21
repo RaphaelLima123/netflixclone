@@ -16,6 +16,7 @@ export const MovieRoll = styled.div`
 export const ImageDiv = styled.div`
   display: inline-block;
   width: 150px;
+  cursor: pointer;
 `;
 
 export const Title = styled.h2`

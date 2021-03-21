@@ -8,7 +8,7 @@ const baseFetch = async (endpoint) => {
   return json;
 }
 
-export default async function getMovies () {
+export async function getMovies () {
   return [
     {
       slug: 'originals',
@@ -50,5 +50,24 @@ export default async function getMovies () {
       title: 'Documentários',
       items: [await baseFetch(`/discover/movie?with_genres=99&${language}&api_key=${API_KEY}`)]
     }
-  ];
+  ]; 
+}
+
+export async function getMovieInfo(movieId, type) {
+  let info = {};
+
+  if (movieId) {
+    switch(type) {
+      case 'movie':
+        info = await baseFetch(`/movie/${movieId}?${language}&api_key=${API_KEY}`);
+      break;
+      case 'tv':
+        info = await baseFetch(`/tv/${movieId}?${language}&api_key=${API_KEY}`);
+      break;
+      default:
+        info = null;
+      break;
+    }
+  }
+  return info;
 }
