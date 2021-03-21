@@ -9,6 +9,28 @@ export const FeaturedMovieSection= styled.section`
 
 export const TitleArea = styled.div``;
 
+export const MovieDescription = styled.div``;
+
+export const MovieInfo = styled.div``;
+
+export const MovieRated = styled.div``;
+
+export const MovieYear = styled.div``;
+
+export const MovieSeasons = styled.div``;
+
+export const ButtonArea = styled.div``;
+
+export const ButtonWatch = styled.button`
+  cursor: pointer;
+`;
+
+export const ButtonSave = styled.button`
+  cursor: pointer;
+`;
+
+export const MovieGenres = styled.div``;
+
 export const VerticalFeatured = styled.div`
   height: inherit;
   width: inherit;
