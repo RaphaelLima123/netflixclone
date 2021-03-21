@@ -1,4 +1,5 @@
 import React from 'react';
+import {ImageDiv, Image, MovieRoll, MovieRow, MovieArea, Title} from './styles'
 
 export default function MovieSection({title, items}){
 
@@ -10,15 +11,17 @@ export default function MovieSection({title, items}){
   ));
   
   return(
-      <div>
-        <h1>{title}</h1>
-        {/* {<h3>{console.log("Aqui", title, secondResult)}</h3>} */}
-        <div className="movieListArea">
-          {firstResults.items.results.length > 0 && firstResults.items.results.map((item, key) => (
-            <img src={`${url}${item.poster_path}`} key={key}/>
-          ))}
-        </div>
-      </div>
-
+      <MovieRow>
+        <Title>{title}</Title>
+        <MovieArea>
+          <MovieRoll>
+            {firstResults.items.results.length > 0 && firstResults.items.results.map((item, key) => (
+              <ImageDiv>
+                <Image key={key} src={`${url}${item.poster_path}`} />
+              </ImageDiv>
+            ))}
+          </MovieRoll>
+        </MovieArea>
+      </MovieRow>
   )
 }

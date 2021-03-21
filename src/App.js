@@ -1,7 +1,6 @@
-import React, { useEffect, useState, Fragment } from 'react';
+import React, { useEffect, useState } from 'react';
 import getMovies from './services/tmdb';
 import MovieSection from './components/movieSection';
-import { GlobalStyle } from './styles';
 
 export default function App() {
 
@@ -21,9 +20,7 @@ export default function App() {
         <div>
             <section>
               {movieList.map((item, key) => (
-                <div>
-                  <MovieSection key={key} title={item.title} items={item.items}/>
-                </div>
+                  <MovieSection key={key} title={item.title} items={item.items}/>      
               ))}
             </section>
         </div>
