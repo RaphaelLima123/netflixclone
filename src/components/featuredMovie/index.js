@@ -28,6 +28,10 @@ function plural(seasonNumber) {
 export default function FeaturedMovie({item}) {
 
   let firstDate = new Date(item.first_air_date);
+  let genres = [];
+  for (let i in item.genres) {
+    genres.push(item.genres[i].name);
+  }
 
   return (
     <FeaturedMovieSection url={`${urlBase}${item.backdrop_path}`}>
@@ -41,10 +45,10 @@ export default function FeaturedMovie({item}) {
           </MovieInfo>
           <MovieDescription>{item.overview}</MovieDescription>
           <ButtonArea>
-            <ButtonWatch/>
-            <ButtonSave/>
+            <ButtonWatch> ► Assistir Agora</ButtonWatch>
+            <ButtonSave> + Minha lista</ButtonSave>
           </ButtonArea>
-          <MovieGenres>Gêneros: </MovieGenres>
+          <MovieGenres><strong>Gêneros:</strong> {genres.join(', ')} </MovieGenres>
         </HorizontalFeatured>
       </VerticalFeatured>   
     </FeaturedMovieSection>

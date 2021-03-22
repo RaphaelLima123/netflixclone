@@ -7,29 +7,87 @@ export const FeaturedMovieSection= styled.section`
   background-image: url(${props => props.url});
 `;
 
-export const TitleArea = styled.div``;
-
-export const MovieDescription = styled.div``;
-
-export const MovieInfo = styled.div``;
-
-export const MovieRated = styled.div``;
-
-export const MovieYear = styled.div``;
-
-export const MovieSeasons = styled.div``;
-
-export const ButtonArea = styled.div``;
-
-export const ButtonWatch = styled.button`
-  cursor: pointer;
+export const TitleArea = styled.div`
+  font-size: 60px;
+  font-weight: bold;
 `;
 
-export const ButtonSave = styled.button`
-  cursor: pointer;
+export const MovieDescription = styled.div`
+  margin-top: 15px;
+  font-size: 20px;
+  color: #999;
+  max-width: 40%;
 `;
 
-export const MovieGenres = styled.div``;
+export const MovieInfo = styled.div`
+  font-size: 18px;
+  font-weight: bold;
+  margin-top: 15px;
+`;
+
+export const MovieRated = styled.div`
+  display: inline-block;
+  color: #46d369;
+  margin-right: 15px;
+`;
+
+export const MovieYear = styled.div`
+  display: inline-block;
+  margin-right: 15px;
+`;
+
+export const MovieSeasons = styled.div`
+  display: inline-block;
+  margin-right: 15px;
+`;
+
+export const ButtonArea = styled.div`
+  margin-top: 15px;
+  margin-bottom: 15px;
+  margin-right: 15px;
+`;
+
+export const ButtonWatch = styled.a`
+  cursor: pointer;
+  background-color: #fff;
+  display: inline-block;
+  font-size: 20px;
+  font-weight: bold;
+  padding: 12px 25px;
+  border-radius: 5px;
+  text-decoration: none;
+  margin-right: 10px;
+  color: #000;
+  opacity: 1;
+  &:hover {
+    opacity: 0.7;
+  }
+  transition: all ease 0.4s;
+`;
+
+export const ButtonSave = styled.a`
+  cursor: pointer;
+  background-color: #333;
+  display: inline-block;
+  font-size: 20px;
+  font-weight: bold;
+  padding: 12px 25px;
+  border-radius: 5px;
+  text-decoration: none;
+  margin-right: 10px;
+  color: #fff;
+  opacity: 1;
+  &:hover {
+    opacity: 0.7;
+  }
+  transition: all ease 0.4s;
+`;
+
+export const MovieGenres = styled.div`
+  margin-top: 15px;
+  font-size: 18px;
+  color: #fff;
+`;
 
 export const VerticalFeatured = styled.div`
   height: inherit;
