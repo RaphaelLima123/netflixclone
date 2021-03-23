@@ -3,7 +3,9 @@ Este projeto é um clone da Netflix feito em ReactJs. Ele consome API's externas
 Como ver este projeto:
 
 git clone https://github.com/RaphaelLima123/netflixclone
+
 cd netflixclone
+
 npm install
 
 npm start ou yarn start
