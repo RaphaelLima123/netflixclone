@@ -8,4 +8,4 @@ cd netflixclone
 
 npm install
 
-npm start ou yarn start
+yarn start
