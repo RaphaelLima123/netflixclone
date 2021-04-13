@@ -1,11 +1,16 @@
-Este projeto é um clone da Netflix feito em ReactJs. Ele consome API's externas do site https://www.themoviedb.org/ para encontrara todos os filmes e as informações necessárias.
+# NETFLIX (CLONE)
 
-Como ver este projeto:
+## Como ver este projeto:
 
+### Criar um diretório para o projeto e clone repositório
+````
+mkdir projet
 git clone https://github.com/RaphaelLima123/netflixclone
+````
 
+### Ir para o diretório do projeto e instalar dependências(NPM OU YARN):
+````
 cd netflixclone
-
 npm install
-
 yarn start
+````
