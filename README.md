@@ -5,6 +5,7 @@
 ### Criar um diretório para o projeto e clone repositório
 ````
 mkdir projet
+cd project
 git clone https://github.com/RaphaelLima123/netflixclone
 ````
 
